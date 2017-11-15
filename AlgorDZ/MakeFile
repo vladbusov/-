@@ -1,0 +1,10 @@
+all: test
+
+test: main.o numbers.o
+	cc main.o numbers.o -o test
+main.o: main.c
+	gcc -c main.c
+numbers.o: numbers.c
+	gcc -c numbers.c
+clean:
+	rm -rf *.o test
